@@ -21,7 +21,7 @@ The teams page contains information about all the Members that made the fest pos
 # Registration Page
 The registration page is where visitors can register for the event. We used the Google App Script feature to store the registration data in an Excel file. This allows the organizers to easily keep track of all the registered participants.
 # Deployment
-The webisite is currently live and can be accessed on [Desportivos](https://www.desportivos.lnmiit.ac.in)
+The webisite is currently live and can be accessed on [Desportivos](https://desportivos.lnmiit.ac.in)
 
 # Conclusion
 Overall, the College Sports Annual Fest Website was a challenging but rewarding project to work on. As the tech team lead, I was responsible for ensuring that all aspects of the website functioned smoothly and that the design was visually appealing. We used a combination of HTML, CSS, and JavaScript to create a dynamic and engaging website that successfully promoted the event.
