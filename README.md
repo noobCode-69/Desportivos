@@ -12,13 +12,12 @@ The website contains the following pages:
 The website is made purely with HTML, CSS, and JavaScript. We also used GSAP for animation. The registration page uses the Google App Script feature to store data in an Excel file.
 
 # Home Page
-The home page contains information about the college sports annual fest, such as the date and location of the event, as well as a brief introduction to the event. We used a slider to display images of previous events, and GSAP animation to make the page more engaging.
+The home page contains information about the college sports annual fest, such as the date and location of the event, as well as a brief introduction to the event.
 # Sponsors Page
-The sponsors page contains a list of all the sponsors for the event. We used CSS to create a grid layout and display the sponsor logos in an organized manner.
+The sponsors page contains a list of all the sponsors for the event. 
 
 # Teams Page
-The teams page contains information about all the teams that will be participating in the event. We used a table to display the team names and their respective captains.
-
+The teams page contains information about all the Members that made the fest possible.
 # Registration Page
 The registration page is where visitors can register for the event. We used the Google App Script feature to store the registration data in an Excel file. This allows the organizers to easily keep track of all the registered participants.
 # Deployment
