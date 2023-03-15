@@ -1,0 +1,288 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+@font-face {
+    font-family: 'Transducer-Extended';
+    src: url('../fonts/TransducerTRIAL-ExtendedBlack.woff2') format('woff2'),
+        url('../fonts/TransducerTRIAL-ExtendedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Transducer-Condensed';
+    src: url('../fonts/TransducerTRIAL-CondensedBlack.woff2') format('woff2'),
+        url('../fonts/TransducerTRIAL-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    /* background-color: rgb(52, 51, 51); */
+}
+
+
+@font-face {
+    font-family: 'LEMON_Regular';
+    src: url('../fonts/LEMONMILK-Regular.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON_bold';
+    src: url('../fonts/LEMONMILK-Bold.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON_medium';
+    src: url('../fonts/LEMONMILK-Medium.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'LEMON_light';
+    src: url('../fonts/LEMONMILK-Light.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'clock_black';
+    src: url('../fonts/FLIPclockBlack.woff2') format('woff2'),
+        url('../fonts/FLIPclockBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'clock_white';
+    src: url('../fonts/FLIPclockWhite.woff2') format('woff2'),
+        url('../fonts/FLIPclockWhite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin-bottom: 2px ;
+}
+  
+
+body {
+    
+    background-color: #f0f0f0;
+    background-image: url(../assets/noise\ \(1\).png);
+    font-family: 'Kanit', sans-serif;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* loading */
+
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    /* background-color: red; */
+    z-index: 100;
+}
+
+.loading video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* cursor */
+
+nav {
+    background-image: inherit;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    border-bottom: 1px solid black;
+    align-items: center;
+    display: flex;
+    background-color: #f0f0f0;
+    z-index: 10;
+    height: 61.6px  ;
+
+}
+
+
+.mobile-appear {
+    display: none;
+    max-width: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50px;
+
+}
+
+.navbar-mobile {
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 61.6px);
+    top:  61.6px;
+    left: 0;
+    position: fixed;
+    z-index: 10000;
+    flex-direction: column;
+    font-family: 'Transducer-Extended';
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #f0f0f0;
+    background-image: url('../assets/noise\ \(1\).png');
+    overflow: hidden;
+    display: none;
+}
+
+
+
+
+.logo-container {
+    padding: 1rem 0;
+    font-size: 1rem;
+    width: 300px;
+    border-right: 1px solid black;
+    font-family: 'Transducer-Extended';
+
+}
+
+.link-container {
+    display: flex;    
+    width: calc(100vw - 300px - 4rem);
+}
+
+.link {
+    font-family: 'LEMON_regular';
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+.register-link {
+    text-align: right;
+}
+
+.register{
+    background-color: black;
+    color: #f0f0f0;
+    padding: 0 1rem;
+    border-radius: 20px;
+}
+
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 1;
+
+   
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    .mobile-disappear {
+        display: none;
+    }
+
+    nav {
+        padding-right: 0;
+        height: 61.6px;
+    }
+
+    .mobile-appear {
+        display: flex;
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        width: calc(100vw - 300px - 1rem);
+    }
+
+}
+
+
+/* only for coming soon */
+
+
+
+
+
+.container {
+    height: calc(100vh - 61.6px);
+    margin-top: 61.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.img-container {
+    width: 300px;
+}
+
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* only for coming soon */

@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+@font-face {
+    font-family: 'Transducer-Extended';
+    src: url('../fonts/TransducerTRIAL-ExtendedBlack.woff2') format('woff2'),
+        url('../fonts/TransducerTRIAL-ExtendedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Transducer-Condensed';
+    src: url('../fonts/TransducerTRIAL-CondensedBlack.woff2') format('woff2'),
+        url('../fonts/TransducerTRIAL-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    /* background-color: rgb(52, 51, 51); */
+}
+
+
+@font-face {
+    font-family: 'LEMON_Regular';
+    src: url('../fonts/LEMONMILK-Regular.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON_bold';
+    src: url('../fonts/LEMONMILK-Bold.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON_medium';
+    src: url('../fonts/LEMONMILK-Medium.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'LEMON_light';
+    src: url('../fonts/LEMONMILK-Light.woff2') format('woff2'),
+        url('../fonts/LEMONMILK-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'clock_black';
+    src: url('../fonts/FLIPclockBlack.woff2') format('woff2'),
+        url('../fonts/FLIPclockBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'clock_white';
+    src: url('../fonts/FLIPclockWhite.woff2') format('woff2'),
+        url('../fonts/FLIPclockWhite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-image: url(../assets/noise\ \(1\).png);
+    background-color: #f0f0f0;
+    font-family: 'LEMON_Regular';
+    /* scrollbar-width: none; */
+}
+
+
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Transducer-Extended';
+}
+
+/* 
+body::-webkit-scrollbar {
+    display: none;
+} */
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+nav {
+    background-image: url(../assets/noise\ \(1\).png);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    border-bottom: 1px solid black;
+    align-items: center;
+    display: flex;
+    background-color: #f0f0f0;
+    z-index: 10;
+    height: 61.6px  ;
+
+}
+
+
+
+
+.mobile-appear {
+    display: none;
+    max-width: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50px;
+
+}
+
+.navbar-mobile {
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 61.6px);
+    top:  61.6px;
+    left: 0;
+    position: fixed;
+    z-index: 10000;
+    flex-direction: column;
+    font-family: 'Transducer-Extended';
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #f0f0f0;
+    background-image: url('../assets/noise\ \(1\).png');
+    overflow: hidden;
+    display: none;
+}
+
+
+
+
+.logo-container {
+    padding: 1rem 0;
+    font-size: 1rem;
+    width: 300px;
+    border-right: 1px solid black;
+    font-family: 'Transducer-Condensed';
+
+}
+
+.link-container {
+    display: flex;
+    width: calc(100vw - 300px - 4rem);
+}
+
+.link {
+    font-family: 'LEMON_regular';
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+.register-link {
+    text-align: right;
+}
+
+.register {
+    background-color: black;
+    color: #f0f0f0;
+    padding: 0 1rem;
+    border-radius: 20px;
+}
+
+
+
+
+/* nav over  */
+
+
+
+
+
+.pagination {
+    position: fixed;
+    top: 61.6px;
+    left: 0;
+    z-index: 10;
+    letter-spacing: 2px;
+}
+
+
+.team-name {
+    margin: 1rem 1rem;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.team-name h1 {
+    line-height: 100%;
+    transform: translateY(100%);
+
+}
+
+
+.team-name1 h1 {
+    transform: translateY(0);
+}
+
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    position: absolute;
+    z-index: 100;
+    bottom: 2rem;
+    right: 5rem;
+}
+
+.left-button,
+.right-button {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+}
+
+.navigation-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.navigation-container svg:hover {
+    fill: black;
+}
+
+
+
+/* levels  */
+
+
+.team-container {
+    /* overflow: hidden; */
+    margin-top: 61.6px; 
+    min-height: calc(100vh - 61.6px);
+    height: fit-content;
+    position: relative;
+    z-index: 9;
+    padding: 3rem 0;
+}
+
+
+.level {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+.level1 {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+}
+
+
+.level1 .person-details h1 {
+    font-size: 1.5rem;
+}
+
+.level1 .person-image  {
+    width: 200px;
+}
+
+.level1>* {
+    width: 100%;
+}
+
+.person-container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+
+.first-name,
+.second-name {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.person-details h1 {
+    font-size: 2rem;
+}
+
+
+.designation {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.number {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.person-image {
+    flex-shrink: 0;
+    width: 220px;
+    height: 50%;
+}
+
+.person-image img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 500px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.aswani {
+    transform: translateY(100px);
+}
+
+.tanya {
+    transform: translateY(-100px);
+
+}  
+
+
+
+.level2 {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+
+
+
+.rugwed {
+    transform: translateY(50px);
+}
+
+.patil {
+    transform: translateY(-50px);
+}
+
+
+.level3 {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+.soni {
+
+    transform: translateY(50px);
+
+}
+
+.jain {
+    transform: translateY(-50px);
+}
+
+
+
+
+
+
+
+.level4 {
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+
+
+.vijay {
+    transform: translateY(-50px);
+
+}
+
+
+.level5 {
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+}
+
+
+.level5 .person-details h1 {
+    font-size: 1.5rem;
+}
+
+.level5 .person-image  {
+    width: 200px;
+}
+
+.level5>* {
+    width: 100%;
+}
+
+
+.so_hell {
+    transform: translateY(100px);
+}
+
+
+
+.brar {
+    transform: translateY(-100px);
+
+}
+
+
+
+
+
+
+.level6 {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+.harshil {
+
+    transform: translateY(50px);
+
+}
+
+.harshit {
+    transform: translateY(-50px);
+}
+
+
+
+
+
+.level7 {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+.level7 .vinayak {
+
+    transform: translateY(50px);
+
+}
+
+.baheti {
+    transform: translateY(-50px);
+}
+
+
+
+
+.level8 {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+}
+
+.maheshwari {
+    transform: translateY(50px);
+}
+
+.arya {
+    transform: translateY(-50px);
+}
+
+
+
+
+
+
+
+
+.level3-part2 {
+
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+
+}
+
+
+.rajjo {
+    transform: translateY(50px);
+}
+
+.sondhi {
+    transform: translateY(-50px);
+}
+
+
+.level6-part2 {
+
+
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+
+
+}
+
+
+.somya {
+    transform: translateY(50px);
+
+}
+
+.ritik {
+    transform: translateY(-50px);
+}
+
+
+
+.level7-part2 {
+
+
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    display: none;
+
+
+}
+
+
+.hardik {
+    transform: translateY(50px);
+
+}
+
+.abhay {
+    transform: translateY(-50px);
+}
+
+
+
+
+.level9 ,
+.level9-part2 ,
+.level9-part3 ,
+.level9-part4{
+    padding: 1rem;
+    height: calc(100vh - 61.6px);
+    /* outline: 1px solid red; */
+    align-items: center ;
+    justify-content: space-evenly;
+    display: none;
+}
+
+
+ 
+
+
+
+
+
+.teams-container {
+    max-width: 700px;
+}
+
+.team-title {
+    flex-wrap: nowrap;
+}
+
+.names {
+    margin-top: 2rem;
+   
+    font-size: 0.9rem;
+}
+
+
+.level9 .names,
+.level9-part2 .names ,
+.level9-part4 .names,
+.level9-part3 .names{
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+
+}
+
+
+.names > div {
+    overflow: hidden;
+} 
+
+.harshit .person-image{
+    /* background-size: cover; */
+    background-position: center right 0;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+
+
+    .pagination {
+        z-index: -1;
+    }
+
+
+    .team-name {
+        margin: 0.5rem;
+        width: 100vw;
+        height: 60px;
+        justify-content: center;
+    }
+
+    .team-name h1 {
+        font-size: 1.2rem;
+    }
+
+    .person-image {
+        width: 100px;
+        height: 150px;
+    }
+
+    .person-container {
+        width: 100%;
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    .person-details {
+        width: 300px;
+    }
+
+    .team-container {
+        min-height: calc(100vh - 61.6px);
+        height: fit-content;
+    }
+
+    .level {
+        /* height: fit-content; */
+    }
+
+
+    .level1 {
+        padding-top: 0;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        flex-direction: column;
+    }
+
+
+    .person-details h1 {
+        font-size: 1.25rem;
+    }
+
+    .level5 {
+
+        padding-top: 0;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        flex-direction: column;
+
+    }
+
+
+
+
+    .level2,
+    .level3,
+    .level4,
+    .level6,
+    .level7,
+    .level8,
+    .level9,
+    .level3-part2,
+    .level6-part2,
+    .level7-part2 {
+        gap: 0;
+        padding-top: 0;
+        justify-content: flex-start;
+        margin-top: calc(60px + 1rem);
+        flex-direction: column;
+
+        /* gap: 1rem; */
+    }
+
+    .level2 .person-image,
+    .level3 .person-image,
+    .level4 .person-image,
+    .level6 .person-image,
+    .level7 .person-image,
+    .level8 .person-image,
+    .level9 .person-image,
+    .level3-part2 .person-image,
+    .level6-part2 .person-image,
+    .level7-part2 .person-image {
+        width: 150px;
+        height: 200px;
+    }
+
+
+
+    .aswani,
+    .vinayak,
+    .tanya,
+    .rugwed,
+    .patil,
+    .soni,
+    .jain,
+    .rajjo,
+    .sondhi,
+    .baheti,
+    .hardik,
+    .abhay,
+    .maheshwari,
+    .arya,
+    .vijay,
+    .so_hell,
+    .brar,
+    .harshil,
+    .harshit,
+    .somya,
+    .ritik {
+        transform: none;
+    }
+
+    .level7 .vinayak {
+        transform: none !important;
+    }
+    .level5 .gandhi{
+        transform: none !important;
+    } 
+
+    .level9 .names,
+    .level9-part2 .names ,
+    .level9-part3 .names,
+    .level9-part4 .names {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+
+
+
+    .navigation-container {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        gap: 2rem;
+        transform: translateX(-50%);
+    }
+
+    .left-button,
+    .right-button {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .level9 {
+        margin-top: 0rem;
+        padding: 1rem;
+    }
+
+    .names {
+        margin-top: 1rem;
+    }
+
+    .sm-team {
+
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        row-gap: 0.75rem;
+
+    }
+
+
+    
+
+    .mobile-disappear {
+        display: none;
+    }
+
+    nav {
+        padding-right: 0;
+        height: 61.6px;
+    }
+
+    .mobile-appear {
+        display: flex;
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        width: calc(100vw - 300px - 1rem);
+    }
+
+
+
+}
